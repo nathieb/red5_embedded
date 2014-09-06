@@ -132,8 +132,8 @@
                             <tasks>
                                 <delete dir="${project.build.directory}/libs/"/>
                                 <mkdir dir="${project.build.directory}/libs/"/>
-                                <delete dir="${project.build.directory}/output/"/>
-                                <mkdir dir="${project.build.directory}/output/"/>
+                                <delete dir="${project.build.directory}/webapps/"/>
+                                <mkdir dir="${project.build.directory}/webapps/"/>
                             </tasks>
                         </configuration>
                         <goals>
@@ -162,7 +162,7 @@
                         <configuration>
                             <tasks>
                                 <echo message="prepare phase" />
-                                <unzip src="${project.build.directory}/libs/red5-war-1.0-RC1.zip" dest="${project.build.directory}/output/" />
+                                <unzip src="${project.build.directory}/libs/red5-war-1.0-RC1.zip" dest="${project.build.directory}/webapps/" />
                             </tasks>
                         </configuration>
                         <goals>
