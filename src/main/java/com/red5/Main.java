@@ -3,6 +3,8 @@ package com.red5;
 import java.io.File;
 import java.io.IOException;
 import java.util.ResourceBundle;
+import javax.naming.Context;
+import org.apache.catalina.startup.Tomcat;
 
 import org.apache.log4j.Logger;
 import org.kohsuke.args4j.CmdLineException;
@@ -19,6 +21,7 @@ public class Main {
     private static CommandLine commandLine;
     private static CmdLineParser parser;
     private static File homeLoggingDir;
+    private static Tomcat tomcat;
 
     public static void main(final String[] args) throws Exception {
         createlogdir();
@@ -28,6 +31,18 @@ public class Main {
         logger.info("Application v" + Main.class.getPackage().getImplementationVersion());
         logger.info("Build: " + ResourceBundle.getBundle("buildInfo").getString("buildNumber"));
         parseCommandLine(args);
+        tomcat = new Tomcat();
+        tomcat.setPort(9090);
+                // set up context,
+        //  "" indicates the path of the ROOT context
+        //  tmpdir is used as docbase because we are not serving any files in this example
+        File base = new File(System.getProperty("java.io.tmpdir"));
+        org.apache.catalina.Context rootCtx = tomcat.addContext("/test", base.getAbsolutePath());
+        // Add the 'killer switch' servlet (used to shut down the server) to the context
+        Tomcat.addServlet((org.apache.catalina.Context) rootCtx, "Servlet1", new Servlet1());
+        rootCtx.addServletMapping("/","Servlet1");
+        tomcat.start();
+        tomcat.getServer().await();
     }
 
     private static void parseCommandLine(final String[] args) {
@@ -55,8 +70,8 @@ public class Main {
         if (!homeLoggingDir.exists()) {
             homeLoggingDir.mkdirs();
             try {
-                File filelog = new File(homeLoggingDir+"/genghis.log");
-                File filehtml = new File(homeLoggingDir+"/bensApps.html");
+                File filelog = new File(homeLoggingDir + "/genghis.log");
+                File filehtml = new File(homeLoggingDir + "/bensApps.html");
                 if (filelog.createNewFile() && filehtml.createNewFile()) {
                     System.out.println("File is created!");
                 } else {
