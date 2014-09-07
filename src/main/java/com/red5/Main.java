@@ -16,7 +16,7 @@ import org.slf4j.bridge.SLF4JBridgeHandler;
 
 /**
  * An awesome red5embedded
- *
+ * @author Olivier Thiébaut
  */
 public class Main {
 
@@ -57,7 +57,7 @@ public class Main {
         StandardServer server = (StandardServer) tomcat.getServer();
         AprLifecycleListener listener = new AprLifecycleListener();
         server.addLifecycleListener(listener);
-        tomcat.addWebapp(contextPath, Main.class.getResource("").getPath() + "/../../../webapps/");
+        tomcat.addWebapp(null,"", Main.class.getResource("").getPath() + "/../../../webapps/");
         tomcat.start();
         tomcat.getServer().await();
     }
