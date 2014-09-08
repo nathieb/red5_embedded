@@ -4,16 +4,13 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
-import javax.naming.Context;
-import org.apache.catalina.Globals;
-import org.apache.catalina.core.AprLifecycleListener;
-import org.apache.catalina.core.StandardServer;
 import org.apache.catalina.startup.Tomcat;
 
 import org.apache.log4j.Logger;
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.slf4j.bridge.SLF4JBridgeHandler;
+import sun.awt.windows.WPrintDialog;
 
 /**
  * An awesome red5embedded
@@ -28,13 +25,14 @@ public class Main {
     private static Tomcat tomcat;
 
     public static void main(final String[] args) throws Exception {
-        //createlogdir();
+
         logger = Logger.getLogger(Main.class);
         //commandLine = new CommandLine();
         SLF4JBridgeHandler.install();
         logger.info("Application v" + Main.class.getPackage().getImplementationVersion());
         logger.info("Build: " + ResourceBundle.getBundle("buildInfo").getString("buildNumber"));
         //parseCommandLine(args);
+        WFProcess.main(args);
         TomcatStart tomcat = new TomcatStart();
         try {
             tomcat.setup();

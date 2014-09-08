@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.red5;
 
 import java.io.File;

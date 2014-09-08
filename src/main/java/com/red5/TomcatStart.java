@@ -8,8 +8,6 @@ package com.red5;
 
 import com.ihm.html.test;
 import java.io.File;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;

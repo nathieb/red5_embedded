@@ -1,8 +1,12 @@
 package com.red5;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 /**
  *
- * @author olivier
+ * @author olivier Thiébaut
  */
 
 public class WFProcess extends Thread {
@@ -14,7 +18,9 @@ public static void main(String[] args) {
 }
 
 public void run() {
-    dbm.startDBServer();
+    String location = System.getProperty("java.io.tmpdir");
+    String db = "LSELite";
+    dbm.startDBServer(location,db);
 
     // some usefull server work here
     Connection conn = dbm.getDBConn();
