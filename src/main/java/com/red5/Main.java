@@ -3,6 +3,7 @@ package com.red5;
 import java.io.File;
 import java.io.IOException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
 import javax.naming.Context;
 import org.apache.catalina.Globals;
 import org.apache.catalina.core.AprLifecycleListener;
@@ -27,39 +28,20 @@ public class Main {
     private static Tomcat tomcat;
 
     public static void main(final String[] args) throws Exception {
-        createlogdir();
+        //createlogdir();
         logger = Logger.getLogger(Main.class);
-        commandLine = new CommandLine();
+        //commandLine = new CommandLine();
         SLF4JBridgeHandler.install();
         logger.info("Application v" + Main.class.getPackage().getImplementationVersion());
         logger.info("Build: " + ResourceBundle.getBundle("buildInfo").getString("buildNumber"));
-        parseCommandLine(args);
-        tomcat = new Tomcat();
-        tomcat.setPort(9090);
-        tomcat.setBaseDir(".");
-        // set up context,
-        //  "" indicates the path of the ROOT context
-        //  tmpdir is used as docbase because we are not serving any files in this example
-        File base = new File(System.getProperty("java.io.tmpdir"));
-        org.apache.catalina.Context rootCtx = tomcat.addContext("/media", base.getAbsolutePath());
-        rootCtx.getServletContext().setAttribute(Globals.ALT_DD_ATTR, Main.class.getResource("web.xml"));
-        // Add the 'killer switch' servlet (used to shut down the server) to the context
-        Tomcat.addServlet((org.apache.catalina.Context) rootCtx, "Servlet1", new Servlet1());
-        rootCtx.addServletMapping("/", "Servlet1");
-        Tomcat.addServlet((org.apache.catalina.Context) rootCtx, "mediaServer", new MediaServer());
-        rootCtx.addServletMapping("/", "mediaServer");
-
-        tomcat.getHost().setAppBase(Main.class.getResource("").getPath() + "/../../../webapps/");
-
-        String contextPath = "/red5";
-
-        // Add AprLifecycleListener
-        StandardServer server = (StandardServer) tomcat.getServer();
-        AprLifecycleListener listener = new AprLifecycleListener();
-        server.addLifecycleListener(listener);
-        tomcat.addWebapp(null,"", Main.class.getResource("").getPath() + "/../../../webapps/");
-        tomcat.start();
-        tomcat.getServer().await();
+        //parseCommandLine(args);
+        TomcatStart tomcat = new TomcatStart();
+        try {
+            tomcat.setup();
+        } catch (Throwable ex) {
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 
     private static void parseCommandLine(final String[] args) {
