@@ -1,0 +1,7 @@
+.champErreur[type='radio'], .champErreur[type='checkbox']{
+	background-color: transparent;
+	border: none;
+}
+.bouton {
+    padding-right: 25px;
+}

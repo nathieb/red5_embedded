@@ -1,0 +1,153 @@
+table.form th {
+    width: 13%;
+}
+#nav, #footer {
+    background: #746B60;
+}
+#nav li[id="aide_en_ligne"]:hover, #nav li[id="modif_aide_en_ligne"]:hover, #nav li[id*="nav_bt_"]:hover, #nav #nav_bt_accueil:hover, #nav li[id*="nav_bt_"] a.selected{
+	background: #948B80;
+}
+
+
+table#utilisateurs {
+    clear: both;
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+}
+table#utilisateurs td,
+table#utilisateurs th {
+    padding: 5px 15px 5px 5px;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+table#utilisateurs thead th {
+    text-align: center;
+    background-color: #CCCCCC;
+}
+table#utilisateurs tbody tr.odd{
+	background-color: #F8F8F8;
+}
+
+table#utilisateurs thead th.sorting_asc {
+    background: #CCCCCC url("../resources/images/icones/up.gif") no-repeat right center;
+}
+table#utilisateurs thead th.sorting_desc {
+    background: #CCCCCC url("../resources/images/icones/down.gif") no-repeat right center;
+}
+table#utilisateurs thead th.sorting {
+    background: #CCCCCC url("../resources/images/icones/up_down.gif") no-repeat right center;
+}
+
+.listeRattachement{
+	float: left;
+	width: 195px;
+}
+.listeRattachement select{
+	width: 190px;
+}
+
+
+
+
+#acces {
+    clear: both;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#acces th {
+    background-color: #CCCCCC;
+    text-align: center;
+}
+#acces td{
+	border: 1px solid #000000;
+	text-align: center;
+}
+#acces th,#acces td {
+	padding: 5px 0; 
+}
+#acces ul.checkbox_list li {
+	float: none;
+	margin-right: 0;
+}
+
+
+.messageInfo
+{
+	margin: 50px auto;
+	text-align: center;
+	font-size: 1.5em;
+}
+#choixDegre {
+    margin: 0 auto 50px auto;
+}
+
+#indicateurs{
+	width: 750px;
+	margin: 15px auto;
+	text-align: center;
+	border: 1px solid #000000;
+	border-collapse: collapse
+}
+#indicateurs thead th{
+	background-color: #948B80;
+	color: #ffffff;
+}
+
+#indicateurs th, #indicateurs td{
+	border: 1px solid #000000;
+	padding: 2px 5px;
+}
+#indicateurs th{
+	text-align: left;
+}
+#indicateurs td ul.checkbox_list li {
+    float: none;
+    margin-right: 0;
+    margin-left: 4px;
+}
+#indicateurs .etat{
+	background-color: #CCCCCC;
+}
+#indicateurs .etat th{
+	padding-left: 15px;
+}
+#indicateurs .indicateur th{
+	padding-left: 25px;
+	font-weight: normal;
+}
+
+
+
+
+table#tabTraces {
+    clear: both;
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+}
+table#tabTraces td,
+table#tabTraces th {
+    padding: 5px 15px 5px 5px;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+table#tabTraces thead th {
+    text-align: center;
+    background-color: #CCCCCC;
+}
+table#tabTraces tbody tr.odd{
+	background-color: #F8F8F8;
+}
+
+table#tabTraces thead th.sorting_asc {
+    background: #CCCCCC url("../resources/images/icones/up.gif") no-repeat right center;
+}
+table#tabTraces thead th.sorting_desc {
+    background: #CCCCCC url("../resources/images/icones/down.gif") no-repeat right center;
+}
+table#tabTraces thead th.sorting {
+    background: #CCCCCC url("../resources/images/icones/up_down.gif") no-repeat right center;
+}

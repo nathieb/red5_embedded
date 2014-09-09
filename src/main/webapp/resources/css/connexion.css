@@ -1,0 +1,85 @@
+table.connexion{
+	width: 34%;
+	margin: 40px auto;
+	border: 1px solid #B61F7F;
+}
+#choixDegre{
+	margin: auto;
+}
+table#menuAccueil{
+	width: auto;
+	margin:auto;
+	text-align: center;
+	font-weight: bold;
+}
+table#menuAccueil td{
+	width: 150px;
+	height: 80px;
+}
+table#menuAccueil input{
+	color: #ffffff;
+	font-weight: bold;
+	width: 100%;
+	height: 100%;
+	border: 2px transparent solid;
+}
+table#menuAccueil input:hover{
+	cursor: pointer;
+}
+table#menuAccueil input.bleu{
+	background-color: #20B3C5;
+}
+table#menuAccueil input.bleu:hover{
+	background-color: #27E4F9;
+}
+table#menuAccueil input.rose{
+	background-color: #B61F7F;
+}
+table#menuAccueil input.rose:hover{
+	background-color: #CA62A3;
+}
+table#menuAccueil input.orange{
+	background-color: #FF6B01;
+}
+table#menuAccueil input.orange:hover{
+	background-color: #FC9953;
+}
+table#menuAccueil input.gris{
+	background-color: #746B60;
+}
+table#menuAccueil input.gris:hover{
+	background-color: #948B80;
+}
+
+#planSite a
+{
+	text-decoration: none;
+}
+
+#planSite a:hover
+{
+	text-decoration: underline;
+}
+
+#planSite ul.modules
+{
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+#planSite ul.modules li
+{
+	margin: 10px 0px;
+	list-style: none;
+}
+
+#planSite ul.menus
+{
+	font-weight: normal;
+	padding-left: 20px;
+}
+
+#planSite ul.menus li
+{
+	margin: 0px;
+}

@@ -10,7 +10,6 @@ import org.apache.log4j.Logger;
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.slf4j.bridge.SLF4JBridgeHandler;
-import sun.awt.windows.WPrintDialog;
 
 /**
  * An awesome red5embedded

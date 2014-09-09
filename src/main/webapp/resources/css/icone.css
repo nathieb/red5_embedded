@@ -1,0 +1,31 @@
+/* 
+    Document   : icone.css
+    Created on : 14 nov. 2012, 19:27:39
+    Author     : olivier
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.checked{
+	background-image: url("../resources/images/icones/checked.gif");
+}
+.enregistrer{
+	background-image: url("../resources/images/icones/enregistrer.gif");
+}
+.annuler{
+	background-image: url("../resources/images/icones/annuler.gif");
+}
+.filtrer{
+	background-image: url("../resources/images/icones/filter.gif");
+}
+.exporter{
+	background-image: url("../resources/images/icones/exporter.gif");
+}
+.log{
+	background-image: url("../resources/images/icones/log.gif");
+}
+.supprimer{
+	background-image: url("../resources/images/icones/poubelle.gif");
+}
+.imprimer{
+	background-image: url("../resources/images/icones/imprimer.gif");
+}

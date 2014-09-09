@@ -1,0 +1,435 @@
+/* 
+    Document   : main
+    Created on : 14 nov. 2012, 19:26:50
+    Author     : olivier Thiébaut
+    Description: SurveyWar
+*/
+html{
+	font-family: Arial, sans-serif;
+	font-size: 100%;
+}
+
+body {
+	width : 1000px;
+	margin: auto; 
+	font-size: .75em;
+}
+a {
+	color: #000000;
+}
+#content div.boutons{
+    font-weight: bold;
+    text-align: right;
+}
+
+.bouton{
+	background: transparent right center no-repeat;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 3px 20px 0 6px;
+    text-decoration: underline;
+    font-family: arial;
+    font-size: 1em;
+}
+#content div.boutons a{
+	margin-left: 15px;
+}
+#content div.boutons img{
+	vertical-align: bottom;
+	margin: 0 0 0 5px;
+}
+
+h1{
+	font-size: 1.9em;
+	/* min-width: 580px; */
+}
+h2{
+	font-size: 1.5em;
+}
+h3{
+	font-size: 1.2em;
+}
+hr {
+    margin: 20px 0;
+}
+
+.clear_both{
+	clear: both;
+}
+.inline_checkbox{
+	list-style: none outside none;
+}
+img{
+	border: none;	
+}
+
+.center{
+	text-align: center;
+}
+.left{
+	text-align: left;
+}
+.right{
+	text-align: right;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.underline{
+	text-decoration: underline;
+}
+
+.hide
+{
+	display: none;
+}
+
+.appliFermee
+{
+	border: 1px solid #f00;
+	padding: 10px;
+	font-size: 1.25em;
+	font-weight: bold;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.appliFermee img.information {
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+
+.champErreur{
+	background-color: #FFAAAA;
+	border: 1px solid #FF0000;
+}
+
+div#bg_page{
+	background: url("../resources/images/bg.gif") repeat-y scroll top transparent;
+	padding: 0 16px;
+    width: 968px;
+}
+
+
+[disabled] { /* Text and background colour, medium red on light yellow */
+	color: #000000;
+	background-color: #EEEEEE;
+}
+
+
+
+/*  HEADER  */
+
+#header {
+	min-height: 210px;	
+}
+
+
+/*  MODULES  */
+
+#modules{
+	background: repeat  0 0 #444444;
+	padding: 0;
+	color: #ffffff;
+	float: right;
+	width: 100%;
+	font-weight: bold;
+    text-transform: uppercase;
+}
+#modules ul li a{
+	color: #ffffff;
+	text-decoration: none;
+}
+#modules ul {
+	list-style: none outside none;
+    margin: 0;
+    padding: 3px 0 1px 0;
+    float: right;
+}
+
+#modules li {
+	float: left;
+	margin: 0 10px;
+	padding-left: 15px;
+	border-bottom: 2px solid;
+}
+
+#modules li#collecte{
+	border-color: #B61F7F;
+  	background: url("../resources/images/fleche_collecte.jpg") no-repeat scroll 0 50% transparent;
+}
+
+#modules li#restitution{
+	border-color: #20B3C5;
+	background: url("../resources/images/fleche_restitution.jpg") no-repeat scroll 0 50% transparent;
+}
+#modules li#supervision{
+	border-color: #FF6B01;
+	background: url("../resources/images/fleche_supervision.jpg") no-repeat scroll 0 50% transparent;
+}
+#modules li#administration_li{
+	padding: 0;
+	border-bottom: none;
+}
+
+#modules li#collecte:hover, #modules li#restitution:hover, #modules li#supervision:hover {
+    background: url("../resources/images/fleche_blanche.jpg") no-repeat scroll 0 50% transparent;
+    border-color: #FFFFFF;
+}
+
+#modules ul#taille_caracteres{
+	float: left;
+}
+#modules ul#taille_caracteres li{
+	padding: 0;
+	border: none;
+}
+
+#modules ul#administration{
+	background-color: #746B60;
+	padding-bottom: 3px;
+}
+#modules li#administration:hover {
+    text-decoration: underline;
+}
+/*  BANNIERE  */
+
+#banniere{
+	float: left;
+    height: 100px;
+    margin: 34px 0 6px;
+    padding: 0;
+    width: 100%;
+}
+#banniere .logo {
+    display: block;
+    float: left;
+    /* height: 100px; */
+    overflow: hidden;
+    margin: 0 10px ;
+}
+#banniere .separation {
+  background: url("../resources/images/logo_separation.jpg") no-repeat scroll 0 5px transparent;
+  display: block;
+  float: left;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  width: 1px;
+}
+#banniere div#titre_site{
+	display: block;
+    float: left;
+    padding: 0 10px;
+    margin: 0;
+    text-align: center;
+    width: 550px;
+}
+#banniere div#titre_site h1{
+	margin-top: 0;
+}
+#banniere div#titre_site h2{
+	font-size: 1.4em;
+}
+#banniere #info_utilisateur{
+	float: left;
+    width: 186px;
+    padding: 0 10px;
+}
+#banniere #info_utilisateur a{
+	font-weight: bold;
+	text-decoration: none;
+}
+#banniere #info_utilisateur a:hover{
+	text-decoration: underline;
+}
+#banniere #info_utilisateur img{
+	margin: 0 0 0 5px;
+    vertical-align: bottom;
+}
+/*  MENU  */
+
+#menu{
+    clear: both;
+    width: 100%;
+}
+#nav {
+    background: #B61F7F;
+    float: left;
+    list-style: none outside none;
+    margin: 0 0 ;
+    padding: 0 7px;
+    width: 954px;
+    height: 30px;
+}
+#nav li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0 10px;
+    padding: 0;
+}
+#nav li[id="aide_en_ligne"]:hover, 
+#nav li[id="modif_aide_en_ligne"]:hover,
+#nav li[id="aide_en_ligne"] a.selected,
+#nav #nav_bt_accueil:hover, 
+#nav #nav_bt_accueil a.selected{
+    background:  #CA62A3;
+}
+
+
+#nav #bt_accueil span {
+    background: url("../resources/images/nav_home_hover_blanc_transparent.gif") no-repeat scroll left top transparent;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    margin-top: 4px;
+    width: 20px;
+}
+
+
+#nav li a {
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: Arial,sans-serif;
+    /* font-size: 100%; */
+    font-weight: bold;
+    padding: 0 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 30px
+}
+
+#nav li#aide_en_ligne, #nav li#modif_aide_en_ligne{
+	float: right;
+}
+#nav li#aide_en_ligne a#bt_aide_en_ligne{
+	height: 30px;
+	line-height: 30px;
+}
+#nav li#aide_en_ligne img{
+	margin-top: 4px;
+	vertical-align: top;
+	//margin-top: 0;
+	//vertical-align: middle;
+}
+#nav li#modif_aide_en_ligne img
+{
+	padding: 0 5px; 
+	margin-top: 6px;
+}
+#menu span.menu{
+	display: table-cell;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/*  FIL ARIANE  */
+ 
+div#fil_ariane{
+	height: 19px; 
+	margin: 20px 20px 0 20px;
+	font-size: 0.9em;
+	
+}
+
+#content {
+	margin: 0 19px;
+}
+
+
+
+/*   FOOTER  */
+
+#footer {
+  background: #B61F7F;
+  color: #FFFFFF;
+  font-size: 0.9em;
+  overflow: hidden;
+  margin-top: 15px;
+  padding: 0 15px;
+}
+
+#footer a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#footer a:hover{
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+#footer #copyright{
+	margin-left: 125px;
+}
+
+
+/* ERREURS */
+.error_list{
+	margin: 0;
+	padding: 0;
+}
+.error_list li{
+	color: #ff0000;
+	list-style: none;
+}
+span.error{
+	background: url("../resources/images/icones/cancel_16.gif") no-repeat scroll 10px center transparent;
+	padding: 5px 10px 5px 31px;
+	background-color: #FFAAAA;
+    border: 2px solid #FF0000;
+    display: inline-block;
+}
+span.success{
+	background: url("../resources/images/icones/checked_16.gif") no-repeat scroll 10px center transparent;
+	padding: 5px 10px 5px 31px;
+	background-color: #AAFFAA;
+    border: 2px solid #00FF00;
+    display: inline-block;
+}
+
+span.success img, span.error img{
+	margin-right: 5px;
+}
+ul.radio_list, ul.checkbox_list{
+	list-style: none;
+	padding: 0; 
+	margin: 0;
+	/*
+	float: left;
+	*/
+}
+ul.radio_list li, ul.checkbox_list li{
+	float: left;
+	margin-right: 10px;
+}
+
+table.form
+{
+	width: 100%;
+}
+table.form th{
+	text-align: left;
+	width: 15%;
+}
+
+table.form td{
+	text-align: left;
+}
+
+
+#nav li#aide_en_ligne img#bt_modif_aide_en_ligne
+{
+	margin-top: 7px;
+	padding-right: 16px;
+}
+
+.etic_titre{
+    font-weight: bold;
+}
+.next {
+   background-image: url("images/icones/next.gif");
+}

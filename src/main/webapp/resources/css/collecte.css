@@ -1,0 +1,103 @@
+#nav, #footer {
+    background: #B61F7F;
+}
+#nav li[id="aide_en_ligne"]:hover, #nav li[id*="nav_bt_"]:hover, #nav #nav_bt_accueil:hover, #nav li[id*="nav_bt_"] a.selected{
+	background: #CA62A3;
+}
+
+h3{
+	padding: 3px 15px;
+	text-transform: uppercase;
+	color: #000000;
+	margin-bottom: 0;
+}
+#collecte_content h3{
+	background-color: #CCCCCC;
+	margin-top: 0;
+}
+#collecte_content h3:hover{
+	cursor: pointer;
+}
+#importation_effectuee h3{
+	border: 1px solid #60CF25;
+}
+
+
+img.modification_tooltip, img.aide_tooltip{
+	float: right;
+}
+.tabQuest{
+	width:100%; 
+	border: 1px solid #D4D0C8;
+}
+
+#content table tr.odd{
+	background-color: #EEEEEE;
+}
+
+#content table td{
+	padding:2px;
+	height: 22px; 
+}
+
+#content table td img{
+	margin-left: 10px;
+	margin-bottom: 4px;
+}
+#content table input[type="text"]{
+	width: 99%;
+}
+#content h3 img{
+	vertical-align: bottom;
+}
+#content h3 img[id*="_ferme"], #content h3 img[id*="_ouvert"]{
+	background-color: #B61F7F;
+	margin-right: 5px;
+}
+#content div.themeErreur h3{
+	border: 1px solid #FF0000;
+}
+#content div.themeErreur h3 img[id*="_ferme"], #content div.themeErreur h3 img[id*="_ouvert"]{
+	background-color: #ff0000;	
+}
+
+#content div.messageInfo
+{
+	margin: 100px auto;
+	text-align: center;
+	font-size: 1.5em;
+}
+img.information{
+	margin-right: 10px;
+	vertical-align: bottom;
+}
+
+span.erreur{
+	color: #ff0000;
+}
+
+ul.radio_list li{
+    margin-right: 5px;
+}
+
+ul.checkbox_list li{
+	float: none;
+}
+table#set_code_uai td{
+	width: 25%
+}
+table#set_code_uai select{
+	width: 100%;
+}
+
+/***** IMPORTATION *****/
+.tabOptionsImportation
+{
+	border: 1px solid #D4D0C8;
+	border-collapse: collapse;
+}
+
+.tabOptionsImportation td
+{
+	
+}

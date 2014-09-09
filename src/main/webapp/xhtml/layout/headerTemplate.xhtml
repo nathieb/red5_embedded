@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <div id="modules">
+        <ul id="taille_caracteres">
+            <li><span class="pointer increaseFont">A+</span> / <span class="pointer resetFont">A</span> / <span class="pointer decreaseFont">A-</span></li>
+        </ul>
+
+        <ul>
+            <li id="collecte">
+                <a onclick="traceLog();" href="connexion.xhtml">Se connecter</a>
+            </li>
+            <li id="restitution">
+                <a onclick="traceLog();" href="abonnement.xhtml">Abonnement</a>
+            </li>
+          
+        </ul>
+    </div>
+
+    <div id="banniere">
+        <span class="logo">
+            <a href="/connexion/accueil">
+                <img alt="Plateforme de t&eacute;l&eacute;chargement" src="../resources/images/logo_MEN_rose.jpg" /></a>					</span>
+        <span class="separation">&nbsp;</span>
+        <div id="titre_site">
+            <h1>Media Server plateforme multim&eacute;dia</h1>
+            <h2>Diffusion de supports &eacute;lectronique</h2>
+        </div>
+
+        <span class="separation">&nbsp;</span>
+        <div id="info_utilisateur">
+            user
+        </div>
+    </div>
+    <div id="menu">
+        <div>
+            <ul id="nav">
+                <li></li>
+                <li id="nav_bt_accueil">
+                    <a title="retour &agrave; l'accueil" id="bt_accueil" class=""  href="choice.xhtml"><span>&nbsp;</span></a>	
+                </li>
+                <li id="aide_en_ligne">
+                    <a title="aide en ligne" id="bt_aide_en_ligne" 
+                       href="/#/">Aide en ligne <img alt="" src="./../resources/images/icones/livre.gif" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="clear_both">
+            menu
+        </div>
+    </div>
+</html>

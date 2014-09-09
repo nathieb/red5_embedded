@@ -1,0 +1,119 @@
+#nav, #footer {
+    background: #20B3C5;
+}
+#nav li[id="aide_en_ligne"]:hover, #nav li[id="modif_aide_en_ligne"]:hover, #nav li[id*="nav_bt_"]:hover, #nav #nav_bt_accueil:hover, #nav li[id*="nav_bt_"] a.selected{
+	background: #27E4F9;
+}
+
+.filtre
+{
+	background-color:#EEEEEE; 
+	width: 100%;
+	padding: 5px;
+}
+.selectMultiple
+{
+	border: 1px solid #000000;
+	margin-rigth: 5px;	
+	padding: 0;
+	width: 134px;
+}
+.titleSelectMultiple{
+	background-color: #20B3C5;
+	color: #FFFFFF;
+    font-weight: bold;
+    padding: 2px 2px 2px 7px;
+    border-bottom: 1px #000000 solid
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.titleSelectMultiple{
+	   	padding: 3px 2px 2px 7px;
+	}
+}
+
+table.filtre th{
+	background-color: #20B3C5;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    font-weight: bold;
+   	padding: 2px 7px;
+   	text-align: left;
+}
+
+.selectConsolidation{
+	width: 100%;
+}
+.select400
+{
+	width: 400px;
+}
+.selectMultipleConsolidation{
+	width: 134px;
+}
+#filtres{
+	margin-top: 10px;
+}
+
+div#filtres table select{
+	width: 200px;
+	margin: 0 0px 5px 0;
+} 
+
+
+div#indicateurs, div#annees, div#niveaux{
+	float: left;
+	border: 1px solid #000000;
+	margin-right: 15px;
+	height: 108px;
+}
+
+
+
+table.indicateur{
+	border: solid 1px;
+	border-collapse: collapse;
+}
+table.indicateur th.titre{
+	border: solid 1px;
+}
+table.indicateur th{
+	border-right: solid 1px;
+	border-left: solid 1px;
+}
+table.indicateur td{
+	text-align: center;	
+	border-right: solid 1px;
+	border-left: solid 1px;
+}
+
+tr.odd{
+	background-color: #DBF9FC;
+}
+tr.niveaux, tr.annees{
+	background: #cccccc;
+}
+
+div[id*='graphiqueIndicateur']{
+	margin-bottom: 10px;
+}
+
+.scrollHorizontal
+{
+	overflow-x: auto;
+}
+
+table.infoFiltre
+{
+	border: solid 1px #000000;
+	border-collapse: collapse;
+}
+table.infoFiltre th, table.infoFiltre td
+{
+	border: solid 1px #000000;
+	padding: 2px 5px;
+}
+table.infoFiltre th
+{
+	background-color: #20B3C5;
+	color: #FFFFFF;
+}
