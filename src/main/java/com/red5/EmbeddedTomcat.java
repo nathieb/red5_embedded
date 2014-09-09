@@ -51,6 +51,8 @@ public abstract class EmbeddedTomcat {
 		new ZipExporterImpl(createWebArchive()).exportTo(new File(mWorkingDir + "/" + getApplicationId() + ".war"),
 				true);
 		mTomcat.addWebapp(mTomcat.getHost(), contextPath, webApp.getAbsolutePath());
+                String red5path = System.getProperty("java.io.tmpdir")+"/webapps/ROOT.war";
+                mTomcat.addWebapp("/red5",red5path);
                 /*
 
 		LOGGER.info("Init users and roles");
@@ -101,7 +103,11 @@ public abstract class EmbeddedTomcat {
 	 * @return a web archive that will be deployed on the embedded tomcat.
 	 */
 	protected abstract WebArchive createWebArchive();
-
+        /**
+         * 
+         * @return  return a web archive to add on the embedded tomcat
+         */
+        protected abstract WebArchive addWebArchive();
 	/**
 	 * @return the name of the application to test.
 	 */
